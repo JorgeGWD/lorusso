@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lorusso</title>
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" href="sass/App.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li data-menuanchor="home" class="active"><a href="#home">Inicio</a></li>
+                <li data-menuanchor="company"><a href="#company">Empresa</a></li>
+                <li data-menuanchor="services"><a href="#services">Servicios</a></li>
+                <li data-menuanchor="contacts"><a href="#contacts">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="fullpage">
+
+        <div class="section home active" id="section0">
+            <h1>Lorusso</h1>
+            <h2>Transporte de cargas <br> en todo el territorio nacional</h2>
+            <p>¿Necesitas una mudanza de equipos o materiales?</p>
+            <button>Contáctanos</button>
+        </div>
+
+        <div class="section company" id="section1">
+            <div class="slide active">
+                <h1>Más de 30 años de expeciencia</h1>
+                <p>El mejor servicio del mercado nacional en las diferentes áreas de la Industria petrolera, petroquímica y construcción.</p>
+                <p>Políticas de calidad</p>
+            </div>
+            <div class="slide">
+                <h1>Seguridad ante todo</h1>
+                <p>Procedimientos de trabajos seguros e ideas innovadoras, dando uso de los máximos estándares de calidad, seguridad, higiene y protección del medio ambiente.</p>
+                <p>Política de Seguridad Industrial</p>
+                <p>Política de Calidad</p>
+                <p>Política Ambiental</p>
+                <p>Volver</p>
+            </div>
+        </div>
+
+        <div class="section services" id="section2">
+            <div class="slide active">
+                <h1>Transporte y almacenamiento</h1>
+                <p>Disponemos de todos los tipos de unidades que su empresa necesita para realizar sus movimientos de equipos o materiales.</p>
+                <h2>Todo terreno</h2>
+                <p>Realizamos entregas en todo el país a través del terreno máritimo, lacustre o aéreo.</p>
+                <p>Ver unidades</p>
+            </div>
+            <div class="slide">
+                <p>Volver</p>
+            </div>
+        </div>
+
+        <div class="section contact" id="section3">
+            <div class="slide active">
+                <h1>Conoce nuestras instalaciones</h1>
+                <p>CIUDAD OJEDA</p>
+                <h2>Base principal</h2>
+                <p>Oficinas principales de administracion.</p>
+                <h1>Conoce nuestras instalaciones</h1>
+                <p>TIA JUANA</p>
+                <h2>Base operacional</h2>
+                <p>Oficinas operacionales.</p>
+            </div>
+            <div class="slide">
+                <h1>Base principal</h1>
+                <button>Ver en Maps</button>
+                <ul>
+                    <li>- Presidencia</li>
+                    <li>- Vice-presidencia</li>
+                    <li>- Gerencia de administración</li>
+                    <li>- Coord. Rrhh</li>
+                    <li>- Coord. Cuentas por cobrar</li>
+                    <li>- Coord. Procura</li>
+                    <li>- Coord. Administrativa operacional</li>
+                    <li>- Coord. Mantenimiento mecánico</li>
+                </ul>
+                <ul>
+                    <li>- Coord. Operacional</li>
+                    <li>- Coord. Siaho</li>
+                    <li>- Taller mecánico</li>
+                    <li>- Almacen de repuestos</li>
+                    <li>- Sala de operaciones</li>
+                    <li>- Salon de adiestramiento de personal</li>
+                    <li>- Depósitos</li>
+                </ul>
+            </div>
+        </div>
+        <p>T.S Lorusso, Carretera “L” entre Av. 34 y 41, Centro empresarial Lorusso, Ciudad Ojeda, Estado Zulia. 0265-6628564 / 6620034 / 6620375 / 6620530</p>
+        <button>Contáctanos</button>
+    </div>
+
+    <script type="text/javascript" src="js/fullpage.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            /*sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']*/
+            anchors: ['home', 'company', 'services', 'contacts'],
+            menu: '#menu',
+        });
+    </script>
+</body>
+
+</html>
