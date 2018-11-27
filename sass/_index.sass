@@ -4,6 +4,16 @@ header
     width: 100%
     text-align: right
 
+.logo
+    float: left
+    padding: 35px
+    width: 54%
+    text-align: left
+    background-color: #fff
+    img
+        max-width: 200px
+        height: auto
+
 nav
     padding: 25px 80px
 
@@ -50,14 +60,66 @@ nav
     font-size: 14px
     text-transform: uppercase
 
-.section
-    //text-align: center
+.container
+    display: grid
+    grid-gap: 15px
+
+.box
+    padding: 50px
+    //background-color: lightblue
+
+h1
+    font-size: 40px
+    font-weight: bold
+
+h2
+    font-size: 30px
+    font-weight: bold
+p
+    font-size: 22px
+
+button
+    float: right
+    padding: 15px 35px
+    font-size: 16px
+    font-weight: bold
+    background: none
+    border: 2px solid orange
+    cursor: pointer
 
 .home
     h1
-        color: #000
-        font-size: 150px
+        //font-size: 150px
+        font-size: 16vmin
         font-weight: bold
     h2
-        color: #000
-        font-size: 55px
+        //font-size: 55px
+        font-size: 5vmin
+        font-weight: lighter
+    .box
+        padding: 50px 0px
+    p
+        float: left
+        padding: 15px 0px
+
+.container.home
+    grid-template-columns: 58% 42%
+    grid-auto-rows: 100% 20%
+
+.welcome-text, .call-to-action
+    margin: 0px auto
+    width: 70%
+
+.box.bottom
+    border-top: 2px solid gray
+    
+.welcome-img
+    position: absolute
+    top: 0px
+    right: 0px
+    bottom: 0px
+    width: 42%
+    background-image: url(../images/welcome-img.jpg)
+    background-repeat: no-repeta
+    background-size: 160%
+    background-position: 0px 50%
