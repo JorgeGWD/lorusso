@@ -1,3 +1,7 @@
+body
+    color: $dark-color
+    background-color: $light-color
+        
 header
     z-index: 1000
     position: fixed
@@ -5,31 +9,63 @@ header
     text-align: right
 
 .logo
+    z-index: 100
+    position: relative
     float: left
-    padding: 35px
-    width: 54%
+    padding: 25px 115px
     text-align: left
-    background-color: #fff
     img
         max-width: 200px
         height: auto
 
 nav
-    padding: 25px 80px
+    z-index: 10
+    position: relative
+    padding: 15px 80px
+    ul
+        z-index: 100
+
+.nav-background
+    z-index: 0
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 0%
+    height: 100px
+    background-color: #fff
+    transition: all 0.5s ease
+
+.nav-border
+    z-index: 0
+    position: absolute
+    bottom: 0px
+    left: 0px
+    width: 0%
+    height: 10px
+    background-color: $primary-color
+    transition: all 0.5s ease
+
+.fp-viewing-company-0, .fp-viewing-company-1, .fp-viewing-services-0, .fp-viewing-services-1, .fp-viewing-contacts-0, .fp-viewing-contacts-1
+    .nav-background
+        width: 100%
+        transition: all 0.5s ease
+    .nav-border
+        width: 80%
+        transition: all 0.5s ease
 
 #menu li
     display: inline-block
     margin: 20px 35px
     color: #000
-    background:#fff
-    background: rgba(255,255,255, 0.5)
+    //background:#fff
+    //background: rgba(255,255,255, 0.5)
     -webkit-border-radius: 10px
             border-radius: 10px
 
 #menu li.active
-    background: #666
-    background: rgba(0,0,0, 0.5)
-    color: #fff
+    //background: #666
+    //background: rgba(0,0,0, 0.5)
+    color: #000
 
 #menu li a
     text-decoration: none
@@ -39,15 +75,16 @@ nav
     color: #000
 
 #menu li:hover
-    background: rgba(255,255,255, 0.8)
+    //background: rgba(255,255,255, 0.8)
 
 #menu li a,
 #menu li.active a
     padding: 9px 18px
     display: block
+    color: grey
 
 #menu li.active a
-    color: #fff
+    color: #000
 
 #menu
     position: relative
@@ -69,14 +106,18 @@ nav
     //background-color: lightblue
 
 h1
-    font-size: 40px
+    //font-size: 40px
+    font-size: 5vmin
+    margin-bottom: 35px
     font-weight: bold
 
 h2
     font-size: 30px
     font-weight: bold
 p
-    font-size: 22px
+    //font-size: 22px
+    font-size: 2.3vmin
+    line-height: 4vmin
 
 button
     float: right
@@ -84,11 +125,12 @@ button
     font-size: 16px
     font-weight: bold
     background: none
-    border: 2px solid orange
+    border: 2px solid $primary-color
     cursor: pointer
 
 .home
     h1
+        margin: 0px
         //font-size: 150px
         font-size: 16vmin
         font-weight: bold
@@ -96,8 +138,6 @@ button
         //font-size: 55px
         font-size: 5vmin
         font-weight: lighter
-    .box
-        padding: 50px 0px
     p
         float: left
         padding: 15px 0px
@@ -105,6 +145,8 @@ button
 .container.home
     grid-template-columns: 58% 42%
     grid-auto-rows: 100% 20%
+    .box
+        padding: 50px 0px
 
 .welcome-text, .call-to-action
     margin: 0px auto
@@ -123,3 +165,44 @@ button
     background-repeat: no-repeta
     background-size: 160%
     background-position: 0px 50%
+
+.text
+    background-color: #fff
+
+.container.company
+    margin: 0px auto
+    width: 80%
+    grid-template-columns: 5fr 6fr
+    .text
+        grid-row-end: span 1
+        p
+            margin-bottom: 35px
+        span p
+            float: right
+            margin-top: 100px
+            margin-bottom: 0px
+            font-weight: bold
+    .img
+        grid-row-end: span 14
+        background-image: url(../images/workers.jpg)
+        background-size: cover
+        background-repeat: no-repeta
+
+.container.security
+    margin: 0px auto
+    width: 80%
+    grid-template-columns: 5fr 6fr
+    span p
+        margin-bottom: 0px
+        font-weight: bold
+    .img
+        //grid-row-end: span 14
+        grid-column: 2 / 3
+        grid-row: 1 / 4
+        background-image: url(../images/security.jpg)
+        background-size: 150%
+        background-position: top right
+        background-repeat: no-repeta
+
+.container
+    margin-top: 80px !important
