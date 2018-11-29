@@ -9,10 +9,10 @@ header
     text-align: right
 
 .logo
-    z-index: 100
+    z-index: 1000
     position: relative
     float: left
-    padding: 25px 115px
+    padding: 12px 15px
     text-align: left
     img
         max-width: 200px
@@ -102,13 +102,15 @@ nav
     grid-gap: 15px
 
 .box
-    padding: 50px
+    //padding: 50px
+    padding: 5vh
     //background-color: lightblue
 
 h1
     //font-size: 40px
     font-size: 5vmin
-    margin-bottom: 35px
+    //margin-bottom: 35px
+    margin-bottom: 3vh
     font-weight: bold
 
 h2
@@ -121,8 +123,10 @@ p
 
 button
     float: right
-    padding: 15px 35px
-    font-size: 16px
+    //padding: 15px 35px
+    padding: 1.5vmin 3vmin
+    //font-size: 16px
+    font-size: 2vmin
     font-weight: bold
     background: none
     border: 2px solid $primary-color
@@ -140,20 +144,25 @@ button
         font-weight: lighter
     p
         float: left
-        padding: 15px 0px
+        padding: 10px 0px
 
 .container.home
-    grid-template-columns: 58% 42%
-    grid-auto-rows: 100% 20%
+    //grid-template-columns: 58% 42%
+    //grid-auto-rows: 100% 20%
+    grid-template-columns: 58vw 42vw
+    grid-auto-rows: 80vh 20vh
     .box
-        padding: 50px 0px
-
+        padding: 5vh 0px
+    
 .welcome-text, .call-to-action
     margin: 0px auto
     width: 70%
 
 .box.bottom
     border-top: 2px solid gray
+    
+.welcome-text
+    align-self: center
     
 .welcome-img
     position: absolute
@@ -174,17 +183,19 @@ button
     width: 80%
     grid-template-columns: 5fr 6fr
     .text
-        grid-row-end: span 1
+        //grid-row-end: span 1
         p
-            margin-bottom: 35px
+            //margin-bottom: 35px
+            margin-bottom: 3vh
         span p
             float: right
-            margin-top: 100px
+            //margin-top: 100px
+            margin-top: 5vh
             margin-bottom: 0px
             font-weight: bold
     .img
         grid-row-end: span 14
-        background-image: url(../images/workers.jpg)
+        background-image: url(../images/working.jpg)
         background-size: cover
         background-repeat: no-repeta
 
@@ -204,5 +215,90 @@ button
         background-position: top right
         background-repeat: no-repeta
 
-.container
-    margin-top: 80px !important
+.container.services
+    margin: 0px auto
+    width: 80%
+    grid-template-columns: 5fr 6fr
+    span p
+        //margin-top: 100px
+        margin-top: 5vh
+        margin-bottom: 0px
+        font-weight: bold
+    .img
+        grid-row-end: span 2
+        //grid-column: 2 / 3
+        //grid-row: 1 / 4
+        background-image: url(../images/transport.jpg)
+        background-size: cover
+        background-position: top right
+        background-repeat: no-repeta
+
+.container.contact
+    margin: 0px auto
+    width: 80%
+    grid-template-columns: 6fr 6fr
+    grid-template-rows: 1fr 1fr 1fr
+    .text
+        //grid-row-end: span 1
+        h1
+            align-self: center
+            margin-bottom: 0px
+        p
+            margin-bottom: 0px
+        span p
+            float: right
+            //margin-top: 100px
+            margin-top: 5vh
+            margin-bottom: 0px
+            font-weight: bold
+    .main
+        grid-row: 2 / 3
+    .operational
+        grid-row: 3 / 4
+    .img
+        //grid-row-end: span 14
+        grid-column: 1 / 2
+        grid-row: 2 / 4
+        background-image: url(../images/workers.jpg)
+        background-size: 100%
+        background-position: 50% 8%
+        background-repeat: no-repeta
+
+.container.description
+    margin: 0px auto
+    width: 50%
+    //grid-template-rows: 2fr 1fr
+    ul
+        width: 50%
+        font-size: 2.3vmin
+        line-height: 4vmin
+    .right
+        float: right
+    .left
+        float: left
+    span p
+        margin-bottom: 0px
+        font-weight: bold
+
+.direction
+    z-index: 100
+    position: absolute
+    right: 0px
+    bottom: 0px
+    padding: 15px 0px
+    width: 100%
+    background-color: #fff
+    .stiky-contact
+        position: relative
+        padding: 0px 50px
+        p
+            float: left
+            padding-top: 10px
+
+#section1, #section2   
+    .container
+        margin-top: 100px !important
+
+#section3
+    .container
+        margin-top: 20px !important

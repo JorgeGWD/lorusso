@@ -57,10 +57,10 @@ header {
 }
 
 .logo {
-  z-index: 100;
+  z-index: 1000;
   position: relative;
   float: left;
-  padding: 25px 115px;
+  padding: 12px 15px;
   text-align: left;
 }
 
@@ -165,12 +165,12 @@ nav ul {
 }
 
 .box {
-  padding: 50px;
+  padding: 5vh;
 }
 
 h1 {
   font-size: 5vmin;
-  margin-bottom: 35px;
+  margin-bottom: 3vh;
   font-weight: bold;
 }
 
@@ -186,8 +186,8 @@ p {
 
 button {
   float: right;
-  padding: 15px 35px;
-  font-size: 16px;
+  padding: 1.5vmin 3vmin;
+  font-size: 2vmin;
   font-weight: bold;
   background: none;
   border: 2px solid #fcc722;
@@ -207,17 +207,17 @@ button {
 
 .home p {
   float: left;
-  padding: 15px 0px;
+  padding: 10px 0px;
 }
 
 .container.home {
-  -ms-grid-columns: 58% 42%;
-      grid-template-columns: 58% 42%;
-  grid-auto-rows: 100% 20%;
+  -ms-grid-columns: 58vw 42vw;
+      grid-template-columns: 58vw 42vw;
+  grid-auto-rows: 80vh 20vh;
 }
 
 .container.home .box {
-  padding: 50px 0px;
+  padding: 5vh 0px;
 }
 
 .welcome-text, .call-to-action {
@@ -227,6 +227,12 @@ button {
 
 .box.bottom {
   border-top: 2px solid gray;
+}
+
+.welcome-text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .welcome-img {
@@ -252,18 +258,13 @@ button {
       grid-template-columns: 5fr 6fr;
 }
 
-.container.company .text {
-  -ms-grid-row-span: 1;
-      grid-row-end: span 1;
-}
-
 .container.company .text p {
-  margin-bottom: 35px;
+  margin-bottom: 3vh;
 }
 
 .container.company .text span p {
   float: right;
-  margin-top: 100px;
+  margin-top: 5vh;
   margin-bottom: 0px;
   font-weight: bold;
 }
@@ -271,7 +272,7 @@ button {
 .container.company .img {
   -ms-grid-row-span: 14;
       grid-row-end: span 14;
-  background-image: url(../images/workers.jpg);
+  background-image: url(../images/working.jpg);
   background-size: cover;
   background-repeat: no-repeta;
 }
@@ -301,7 +302,129 @@ button {
   background-repeat: no-repeta;
 }
 
-.container {
-  margin-top: 80px !important;
+.container.services {
+  margin: 0px auto;
+  width: 80%;
+  -ms-grid-columns: 5fr 6fr;
+      grid-template-columns: 5fr 6fr;
+}
+
+.container.services span p {
+  margin-top: 5vh;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.container.services .img {
+  -ms-grid-row-span: 2;
+      grid-row-end: span 2;
+  background-image: url(../images/transport.jpg);
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeta;
+}
+
+.container.contact {
+  margin: 0px auto;
+  width: 80%;
+  -ms-grid-columns: 6fr 6fr;
+      grid-template-columns: 6fr 6fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.container.contact .text h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0px;
+}
+
+.container.contact .text p {
+  margin-bottom: 0px;
+}
+
+.container.contact .text span p {
+  float: right;
+  margin-top: 5vh;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.container.contact .main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.container.contact .operational {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.container.contact .img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  background-image: url(../images/workers.jpg);
+  background-size: 100%;
+  background-position: 50% 8%;
+  background-repeat: no-repeta;
+}
+
+.container.description {
+  margin: 0px auto;
+  width: 50%;
+}
+
+.container.description ul {
+  width: 50%;
+  font-size: 2.3vmin;
+  line-height: 4vmin;
+}
+
+.container.description .right {
+  float: right;
+}
+
+.container.description .left {
+  float: left;
+}
+
+.container.description span p {
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.direction {
+  z-index: 100;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 15px 0px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.direction .stiky-contact {
+  position: relative;
+  padding: 0px 50px;
+}
+
+.direction .stiky-contact p {
+  float: left;
+  padding-top: 10px;
+}
+
+#section1 .container, #section2 .container {
+  margin-top: 100px !important;
+}
+
+#section3 .container {
+  margin-top: 20px !important;
 }
 /*# sourceMappingURL=App.css.map */
