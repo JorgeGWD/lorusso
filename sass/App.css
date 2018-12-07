@@ -53,6 +53,8 @@ body {
   display: -ms-grid;
   display: grid;
   grid-gap: 15px;
+  margin: 0px auto;
+  width: 80%;
 }
 
 .box {
@@ -73,6 +75,35 @@ h2 {
 p {
   font-size: 2.3vmin;
   line-height: 4vmin;
+}
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+  display: none;
+}
+
+.text {
+  position: relative;
+  background-color: #fff;
+}
+
+.text .fp-controlArrow.fp-next,
+.text .fp-controlArrow.fp-prev {
+  display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  border-style: none;
+  -webkit-transform: none;
+          transform: none;
 }
 
 button {
@@ -102,9 +133,12 @@ button {
 }
 
 .container.home {
+  z-index: 10;
+  position: relative;
   -ms-grid-columns: 58vw 42vw;
       grid-template-columns: 58vw 42vw;
   grid-auto-rows: 80vh 20vh;
+  width: 100%;
 }
 
 .container.home .box {
@@ -138,13 +172,7 @@ button {
   background-position: 0px 50%;
 }
 
-.text {
-  background-color: #fff;
-}
-
 .container.company {
-  margin: 0px auto;
-  width: 80%;
   -ms-grid-columns: 5fr 6fr;
       grid-template-columns: 5fr 6fr;
 }
@@ -169,8 +197,6 @@ button {
 }
 
 .container.security {
-  margin: 0px auto;
-  width: 80%;
   -ms-grid-columns: 5fr 6fr;
       grid-template-columns: 5fr 6fr;
 }
@@ -194,8 +220,6 @@ button {
 }
 
 .container.services {
-  margin: 0px auto;
-  width: 80%;
   -ms-grid-columns: 5fr 6fr;
       grid-template-columns: 5fr 6fr;
 }
@@ -216,8 +240,6 @@ button {
 }
 
 .container.contact {
-  margin: 0px auto;
-  width: 80%;
   -ms-grid-columns: 6fr 6fr;
       grid-template-columns: 6fr 6fr;
   -ms-grid-rows: auto 1fr 1fr;
@@ -268,7 +290,6 @@ button {
 }
 
 .container.description {
-  margin: 0px auto;
   width: 50%;
 }
 
@@ -319,6 +340,44 @@ button {
   margin-top: 35px !important;
 }
 
+@media (max-width: 1200px) {
+  .welcome-img {
+    background-size: cover;
+  }
+  .direction {
+    padding: 0px 0px 15px 0px;
+    text-align: center;
+  }
+  .direction .stiky-contact p {
+    padding: 10px 0px;
+  }
+  .direction .stiky-contact p, .direction .stiky-contact button {
+    float: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .container.home {
+    -ms-grid-columns: 1fr 0fr;
+        grid-template-columns: 1fr 0fr;
+    grid-auto-rows: 84vh 16vh;
+    grid-gap: 0px;
+  }
+  .container.home h1, .container.home h2 {
+    color: #fff;
+  }
+  .box.bottom {
+    background-color: #f1f1f1;
+  }
+  .welcome-img {
+    width: 100%;
+  }
+  .container.company .img {
+    -ms-grid-row-span: 10;
+        grid-row-end: span 10;
+  }
+}
+
 header {
   z-index: 1000;
   position: fixed;
@@ -326,11 +385,15 @@ header {
   text-align: right;
 }
 
+header span {
+  display: none;
+}
+
 .logo {
   z-index: 1000;
   position: relative;
   float: left;
-  padding: 12px 15px;
+  padding: 26px 2.5vw;
   text-align: left;
 }
 
@@ -389,7 +452,7 @@ nav ul {
 
 #menu li {
   display: inline-block;
-  margin: 20px 35px;
+  margin: 20px 1.8vw;
   color: #000;
   -webkit-border-radius: 10px;
   -webkit-border-radius-border-radius: 10px;
@@ -410,7 +473,7 @@ nav ul {
 
 #menu li a,
 #menu li.active a {
-  padding: 9px 18px;
+  padding: 9px 1vw;
   display: block;
   color: grey;
 }
@@ -430,7 +493,7 @@ nav ul {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   header {
     -webkit-box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
             box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
@@ -438,6 +501,7 @@ nav ul {
   header span {
     z-index: 1000;
     position: absolute;
+    display: block;
     top: 20px;
     right: 20px;
     padding: 20px;

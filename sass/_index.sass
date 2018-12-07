@@ -5,6 +5,8 @@ body
 .container
     display: grid
     grid-gap: 15px
+    margin: 0px auto
+    width: 80%
 
 .box
     //padding: 50px
@@ -25,6 +27,33 @@ p
     //font-size: 22px
     font-size: 2.3vmin
     line-height: 4vmin
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev
+    display: none
+
+.text
+    position: relative
+    background-color: #fff
+    .fp-controlArrow.fp-next,
+    .fp-controlArrow.fp-prev
+        display: inline
+        -webkit-user-select: none
+        -moz-user-select: none
+        -khtml-user-select: none
+        -ms-user-select: none
+        position: relative
+        //z-index: 4
+        top: 0px
+        right: 0px
+        left: 0px
+        cursor: pointer
+        width: auto
+        height: auto
+        //background-color: red
+        border-style: none
+        //margin-top: 0px
+        transform: none
 
 button
     float: right
@@ -52,10 +81,13 @@ button
         padding: 10px 0px
 
 .container.home
+    z-index: 10
+    position: relative
     //grid-template-columns: 58% 42%
     //grid-auto-rows: 100% 20%
     grid-template-columns: 58vw 42vw
     grid-auto-rows: 80vh 20vh
+    width: 100%
     .box
         padding: 5vh 0px
     
@@ -80,12 +112,7 @@ button
     background-size: 160%
     background-position: 0px 50%
 
-.text
-    background-color: #fff
-
 .container.company
-    margin: 0px auto
-    width: 80%
     grid-template-columns: 5fr 6fr
     .text
         //grid-row-end: span 1
@@ -105,8 +132,6 @@ button
         background-repeat: no-repeta
 
 .container.security
-    margin: 0px auto
-    width: 80%
     grid-template-columns: 5fr 6fr
     span p
         margin-bottom: 0px
@@ -121,8 +146,6 @@ button
         background-repeat: no-repeta
 
 .container.services
-    margin: 0px auto
-    width: 80%
     grid-template-columns: 5fr 6fr
     span p
         //margin-top: 100px
@@ -139,8 +162,6 @@ button
         background-repeat: no-repeta
 
 .container.contact
-    margin: 0px auto
-    width: 80%
     grid-template-columns: 6fr 6fr
     grid-template-rows: auto 1fr 1fr
     .text
@@ -170,7 +191,6 @@ button
         background-repeat: no-repeta
 
 .container.description
-    margin: 0px auto
     width: 50%
     //grid-template-rows: 2fr 1fr
     ul
@@ -207,3 +227,35 @@ button
 #section3
     .container
         margin-top: 35px !important
+
+@media (max-width: 1200px)
+    .welcome-img
+        background-size: cover
+    
+    .direction
+        padding: 0px 0px 15px 0px
+        text-align: center
+        .stiky-contact
+            p
+                padding: 10px 0px
+            p, button
+                float: none
+        
+@media (max-width: 800px)
+    .container.home
+        grid-template-columns: 1fr 0fr
+        grid-auto-rows: 84vh 16vh
+        grid-gap: 0px
+        h1, h2
+            color: #fff
+        button
+            //background-color: $primary-color
+
+    .box.bottom
+        background-color: #f1f1f1
+
+    .welcome-img
+        width: 100%
+
+    .container.company .img 
+        grid-row-end: span 10
