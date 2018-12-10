@@ -21,8 +21,10 @@ h1
     font-weight: bold
 
 h2
+    margin-top: 2vh
     font-size: 30px
     font-weight: bold
+
 p
     //font-size: 22px
     font-size: 2.3vmin
@@ -65,6 +67,10 @@ button
     background: none
     border: 2px solid $primary-color
     cursor: pointer
+
+a
+    text-decoration: none
+    color: $dark-color
 
 .home
     h1
@@ -110,7 +116,7 @@ button
     background-image: url(../images/welcome-img.jpg)
     background-repeat: no-repeta
     background-size: 160%
-    background-position: 0px 50%
+    background-position: 0px 10%
 
 .container.company
     grid-template-columns: 5fr 6fr
@@ -231,7 +237,11 @@ button
 @media (max-width: 1200px)
     .welcome-img
         background-size: cover
-    
+
+    .container.contact
+        .full
+            grid-column: 1 / 3
+
     .direction
         padding: 0px 0px 15px 0px
         text-align: center
@@ -240,7 +250,12 @@ button
                 padding: 10px 0px
             p, button
                 float: none
-        
+
+@media (max-width: 1050px)
+    .container.security, .container.contact
+        .img
+            background-size: cover
+
 @media (max-width: 800px)
     .container.home
         grid-template-columns: 1fr 0fr
@@ -258,4 +273,83 @@ button
         width: 100%
 
     .container.company .img 
-        grid-row-end: span 10
+        grid-row-end: span 8
+
+    .container.security
+        grid-template-columns: 5fr 5fr
+        .full
+            grid-column: 1 / 3
+        .left
+            grid-column: 1 / 2
+        .right
+            grid-column: 2 / 3
+        .ambiental
+            grid-row: 2 / 3
+        .back
+            grid-row: 3 / 4
+        .img
+            display: none
+            //background-size: cover
+
+    .container.company, .container.services
+        .img
+            background-position: 50%
+
+// Modals
+
+.fp-tableCell
+    position: relative
+
+.politicsModal
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    top: 0
+    right: 0px
+    bottom: 0px
+    left: 0px
+    background: rgba(0, 0, 0, 0.9)
+    z-index: 99999
+    opacity: 0
+    -webkit-transition: opacity 400ms ease-in
+    -moz-transition: opacity 400ms ease-in
+    transition: opacity 400ms ease-in
+    pointer-events: none
+    li
+        //font-size: 22px
+        margin: 2.5vh 0px 0px 2.5vh
+        font-size: 2.3vmin
+        line-height: 4vmin
+        list-style: circle
+
+.politicsModal:target
+    opacity: 1
+    pointer-events: auto
+
+.close
+    position: absolute
+    top: 35px
+    padding: 10px 13px
+    right: 25px
+    color: #fff
+    //width: 24px
+    text-decoration: none
+    font-weight: bold
+    background: #000
+    border-radius: 50px
+
+.industrialPol
+    position: relative
+    top: 50px
+    margin: 0px auto
+    padding: 5vh
+    width: 80%
+    height: 60vh
+    background-color: #fff
+    overflow: auto
+    a
+        position: absolute
+        right: 5vh
+    p
+        margin-top: 2vh
