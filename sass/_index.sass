@@ -82,9 +82,6 @@ a
         //font-size: 55px
         font-size: 5vmin
         font-weight: lighter
-    p
-        float: left
-        padding: 10px 0px
 
 .container.home
     z-index: 10
@@ -101,7 +98,15 @@ a
     margin: 0px auto
     width: 70%
 
+.call-to-action
+    display: grid
+    grid-gap: 15px
+    grid-template-columns: 6fr 1fr
+    p
+        align-self: center
+
 .box.bottom
+    align-self: center
     border-top: 2px solid gray
     
 .welcome-text
@@ -216,15 +221,18 @@ a
     position: absolute
     right: 0px
     bottom: 0px
-    padding: 15px 0px
+    //padding: 15px 0px
     width: 100%
     background-color: #fff
     .stiky-contact
+        display: grid
+        grid-gap: 15px
+        grid-template-columns: 6fr 1fr
         position: relative
-        padding: 0px 50px
+        padding: 15px 50px
         p
-            float: left
-            padding-top: 10px
+            //padding-top: 10px
+            align-self: center
 
 #section1, #section2   
     .container
@@ -243,18 +251,18 @@ a
             grid-column: 1 / 3
 
     .direction
-        padding: 0px 0px 15px 0px
+        //padding: 0px 0px 15px 0px
         text-align: center
-        .stiky-contact
-            p
-                padding: 10px 0px
-            p, button
-                float: none
 
 @media (max-width: 1050px)
     .container.security, .container.contact
         .img
             background-size: cover
+    
+    .container.description
+        width: 80vw
+        .stiky-contact
+            padding: 0px 50px
 
 @media (max-width: 800px)
     .container.home
@@ -300,7 +308,7 @@ a
 .fp-tableCell
     position: relative
 
-.politicsModal
+.politicsModal, .contactModal
     position: absolute
     display: flex
     justify-content: center
@@ -323,7 +331,7 @@ a
         line-height: 4vmin
         list-style: circle
 
-.politicsModal:target
+.politicsModal:target, .contactModal:target
     opacity: 1
     pointer-events: auto
 
@@ -339,7 +347,7 @@ a
     background: #000
     border-radius: 50px
 
-.industrialPol
+.industrialPol, .contactForm
     position: relative
     top: 50px
     margin: 0px auto

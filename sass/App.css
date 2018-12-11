@@ -133,11 +133,6 @@ a {
   font-weight: lighter;
 }
 
-.home p {
-  float: left;
-  padding: 10px 0px;
-}
-
 .container.home {
   z-index: 10;
   position: relative;
@@ -156,7 +151,24 @@ a {
   width: 70%;
 }
 
+.call-to-action {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-columns: 6fr 1fr;
+      grid-template-columns: 6fr 1fr;
+}
+
+.call-to-action p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .box.bottom {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   border-top: 2px solid gray;
 }
 
@@ -323,19 +335,24 @@ a {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  padding: 15px 0px;
   width: 100%;
   background-color: #fff;
 }
 
 .direction .stiky-contact {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-columns: 6fr 1fr;
+      grid-template-columns: 6fr 1fr;
   position: relative;
-  padding: 0px 50px;
+  padding: 15px 50px;
 }
 
 .direction .stiky-contact p {
-  float: left;
-  padding-top: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #section1 .container, #section2 .container {
@@ -356,20 +373,19 @@ a {
     grid-column: 1 / 3;
   }
   .direction {
-    padding: 0px 0px 15px 0px;
     text-align: center;
-  }
-  .direction .stiky-contact p {
-    padding: 10px 0px;
-  }
-  .direction .stiky-contact p, .direction .stiky-contact button {
-    float: none;
   }
 }
 
 @media (max-width: 1050px) {
   .container.security .img, .container.contact .img {
     background-size: cover;
+  }
+  .container.description {
+    width: 80vw;
+  }
+  .container.description .stiky-contact {
+    padding: 0px 50px;
   }
 }
 
@@ -434,7 +450,7 @@ a {
   position: relative;
 }
 
-.politicsModal {
+.politicsModal, .contactModal {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,14 +473,14 @@ a {
   pointer-events: none;
 }
 
-.politicsModal li {
+.politicsModal li, .contactModal li {
   margin: 2.5vh 0px 0px 2.5vh;
   font-size: 2.3vmin;
   line-height: 4vmin;
   list-style: circle;
 }
 
-.politicsModal:target {
+.politicsModal:target, .contactModal:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -481,7 +497,7 @@ a {
   border-radius: 50px;
 }
 
-.industrialPol {
+.industrialPol, .contactForm {
   position: relative;
   top: 50px;
   margin: 0px auto;
@@ -492,12 +508,12 @@ a {
   overflow: auto;
 }
 
-.industrialPol a {
+.industrialPol a, .contactForm a {
   position: absolute;
   right: 5vh;
 }
 
-.industrialPol p {
+.industrialPol p, .contactForm p {
   margin-top: 2vh;
 }
 
@@ -648,7 +664,7 @@ nav ul {
   }
   .logo a {
     display: inline-block;
-    padding: 20px;
+    padding: 15px 20px;
   }
   #menu li {
     display: block;
