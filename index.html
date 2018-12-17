@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/gallery.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+
     <link rel="stylesheet" href="sass/App.css">
 </head>
 
@@ -79,7 +84,7 @@
                     </div>
                     <div id="industrialModal" class="politicsModal">
                         <div class="industrialPol">
-                            <a href="#close" title="Close" className="close">X</a>
+                            <a href="#close" title="Close" class="close">X</a>
                             <h1>Política de Seguridad Industrial</h1>
                             <p>Es política de la empresa TRANSPORTE Y SURTIDORA LORUSSO C.A, velar y acatar el cumplimiento de todas las normativas en SIAHO. Para garantizar la integridad física y mental de sus trabajadores, preservando un ambiente seguro,
                                 sano y ecológicamente equilibrado, mediante el uso y manejo de los productos que puedan contaminar o generar un posible impacto tanto al medio Ambiente como a la Salud.</p>
@@ -101,7 +106,7 @@
                     </div>
                     <div id="cualitylModal" class="politicsModal">
                         <div class="industrialPol">
-                            <a href="#close" title="Close" className="close">X</a>
+                            <a href="#close" title="Close" class="close">X</a>
                             <h1>Política Calidad</h1>
                             <p>La empresa tiene el compromiso de satisfacer las necesidades de sus clientes y mantener estándares de calidad en sus servicios, que aseguren su competitividad en los mercados nacionales.</p>
 
@@ -129,7 +134,7 @@
                     </div>
                     <div id="ambientallModal" class="politicsModal">
                         <div class="industrialPol">
-                            <a href="#close" title="Close" className="close">X</a>
+                            <a href="#close" title="Close" class="close">X</a>
                             <h1>Política Ambiental</h1>
                             <p>Es responsabilidad fundamental de TRANSPORTE Y SURTIDORA LORUSSO C.A., asegurar un proceso efectivo de protección y control ambiental.</p>
 
@@ -189,7 +194,25 @@
                 </div>
             </div>
             <div class="slide">
-                <div class="container galery">
+                <div class="container gallerySlider">
+                    <div class="box text">
+                        <div id="mygallery" class="gallery">
+                            <div class="images">
+                                <div class="active" style="background-image: url(images/gallery/image-001.jpg)"></div>
+                                <div style="background-image: url(images/gallery/image-002.jpg)"></div>
+                                <div style="background-image: url(images/gallery/image-003.jpg)"></div>
+                                <div style="background-image: url(images/gallery/image-004.jpg)"></div>
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </div>
+                            <div class="thumbs">
+                                <div class="active" style="background-image: url(images/gallery/image-001.jpg)"></div>
+                                <div style="background-image: url(images/gallery/image-002.jpg)"></div>
+                                <div style="background-image: url(images/gallery/image-003.jpg)"></div>
+                                <div style="background-image: url(images/gallery/image-004.jpg)"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="box text">
                         <span>
                             <p class="fp-controlArrow fp-prev">Volver</p>
@@ -253,12 +276,35 @@
             </div>
             <div id="contactlModal" class="contactModal">
                 <div class="contactForm">
-                    <a href="#close" title="Close" className="close">X</a>
-                    <h1>Contactenos</h1>
-                    <p>La empresa tiene el compromiso de satisfacer las necesidades de sus clientes y mantener estándares de calidad en sus servicios, que aseguren su competitividad en los mercados nacionales.</p>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <div class="container-contact">
+                        <div class="section-title">
+                            <h1>Contáctanos</h1>
+                        </div>
+                        <form class="contact-form">
+                            <div class="wrap-input">
+                                <label>Empresa</label>
+                                <input name="name" placeholder="Nombre de su empresa" />
+                                <span class="focus-input"></span>
+                            </div>
 
-                    <p>TRANSPORTE Y SURTIDORA LORUSSO C.A., suministra oportunamente todo tipo de servicios a nuestros clientes, cumpliendo con sus requerimientos y/o necesidades manteniendo su satisfacción a través del avances continuos de nuestros procesos.
-                    </p>
+                            <div class="wrap-input">
+                                <label>Email</label>
+                                <input name="email" type="email" placeholder="Su dirección de email" />
+                                <span class="focus-input"></span>
+                            </div>
+
+                            <div class="wrap-input">
+                                <label>Mensaje</label>
+                                <textarea name="message" placeholder="Escriba su mensaje..."></textarea>
+                                <span class="focus-input"></span>
+                            </div>
+
+                            <div class="submit-area">
+                                <input id="submit" name="submit" type="submit" value="Submit" />
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="direction">
@@ -280,6 +326,9 @@
             menu: '#menu',
         });
     </script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/gallery.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>

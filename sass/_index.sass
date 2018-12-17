@@ -10,7 +10,7 @@ body
 
 .box
     //padding: 50px
-    padding: 5vh
+    padding: 4vh
     //background-color: lightblue
 
 h1
@@ -21,8 +21,8 @@ h1
     font-weight: bold
 
 h2
-    margin-top: 2vh
-    font-size: 30px
+    //font-size: 30px
+    font-size: 3.5vmin
     font-weight: bold
 
 p
@@ -79,6 +79,7 @@ a
         font-size: 16vmin
         font-weight: bold
     h2
+        margin-top: 2vh
         //font-size: 55px
         font-size: 5vmin
         font-weight: lighter
@@ -92,7 +93,7 @@ a
     grid-auto-rows: 80vh 20vh
     width: 100%
     .box
-        padding: 5vh 0px
+        padding: 4vh 0px
     
 .welcome-text, .call-to-action
     margin: 0px auto
@@ -133,7 +134,7 @@ a
         span p
             float: right
             //margin-top: 100px
-            margin-top: 5vh
+            margin-top: 4vh
             margin-bottom: 0px
             font-weight: bold
     .img
@@ -160,7 +161,8 @@ a
     grid-template-columns: 5fr 6fr
     span p
         //margin-top: 100px
-        margin-top: 5vh
+        float: left
+        margin-top: 4vh
         margin-bottom: 0px
         font-weight: bold
     .img
@@ -171,6 +173,13 @@ a
         background-size: cover
         background-position: top right
         background-repeat: no-repeta
+
+.container.gallerySlider
+    grid-template-rows: 5fr 1fr
+    .gallery
+        display: grid
+        grid-gap: 15px
+        grid-template-columns: 7fr 4fr
 
 .container.contact
     grid-template-columns: 6fr 6fr
@@ -185,7 +194,7 @@ a
         span p
             float: right
             //margin-top: 100px
-            margin-top: 5vh
+            margin-top: 4vh
             margin-bottom: 0px
             font-weight: bold
     .main
@@ -196,9 +205,10 @@ a
         //grid-row-end: span 14
         grid-column: 1 / 2
         grid-row: 2 / 4
+        //grid-row-end: span 14
         background-image: url(../images/workers.jpg)
         background-size: 100%
-        background-position: 50% 8%
+        background-position: 50% 20%
         background-repeat: no-repeta
 
 .container.description
@@ -240,68 +250,7 @@ a
 
 #section3
     .container
-        margin-top: 35px !important
-
-@media (max-width: 1200px)
-    .welcome-img
-        background-size: cover
-
-    .container.contact
-        .full
-            grid-column: 1 / 3
-
-    .direction
-        //padding: 0px 0px 15px 0px
-        text-align: center
-
-@media (max-width: 1050px)
-    .container.security, .container.contact
-        .img
-            background-size: cover
-    
-    .container.description
-        width: 80vw
-        .stiky-contact
-            padding: 0px 50px
-
-@media (max-width: 800px)
-    .container.home
-        grid-template-columns: 1fr 0fr
-        grid-auto-rows: 84vh 16vh
-        grid-gap: 0px
-        h1, h2
-            color: #fff
-        button
-            //background-color: $primary-color
-
-    .box.bottom
-        background-color: #f1f1f1
-
-    .welcome-img
-        width: 100%
-
-    .container.company .img 
-        grid-row-end: span 8
-
-    .container.security
-        grid-template-columns: 5fr 5fr
-        .full
-            grid-column: 1 / 3
-        .left
-            grid-column: 1 / 2
-        .right
-            grid-column: 2 / 3
-        .ambiental
-            grid-row: 2 / 3
-        .back
-            grid-row: 3 / 4
-        .img
-            display: none
-            //background-size: cover
-
-    .container.company, .container.services
-        .img
-            background-position: 50%
+        margin-top: 25px !important
 
 // Modals
 
@@ -351,13 +300,147 @@ a
     position: relative
     top: 50px
     margin: 0px auto
-    padding: 5vh
+    padding: 4vh
     width: 80%
     height: 60vh
     background-color: #fff
     overflow: auto
     a
         position: absolute
-        right: 5vh
+        right: 4vh
     p
         margin-top: 2vh
+
+.contactForm
+    width: 25vw
+    height: auto
+
+.wrap-input
+    position: relative
+    label
+        display: block
+        margin-top: 20px
+        letter-spacing: 2px
+
+input
+    width: calc(100% - 4px)
+    padding: 10px 0px 5px 5px
+    border: none
+    &:focus
+        outline: none
+    
+textarea
+    width: calc(100% - 2px)
+    max-width: calc(100% - 2px)
+    height: 150px
+    padding: 10px 0px 5px 5px
+    border: none
+    &:focus
+        outline: none
+
+select
+    width: 100%
+    padding: 10px 0px 5px 5px
+    border: none
+    &:focus
+        outline: none
+
+select option:hover
+    background-color: red
+
+.submit-area
+    width: 100%
+    text-align: center
+
+.focus-input
+    position: absolute
+    bottom: 0px
+    left: 0px
+    width: 100%
+    border-bottom: 1px solid gray
+
+input#submit
+    margin-top: 4vh
+    padding: 1.5vmin 3vmin
+    max-width: 200px
+    //color: $secundary-color
+    //font-size: 12px
+    font-size: 2vmin
+    font-weight: bold
+    background: none
+    border: 2px solid $primary-color
+    text-decoration: none
+    transition: all .2s ease-in-out
+    cursor: pointer
+    //&:hover
+        color: #fff
+        background-color: $secundary-color
+        transition: all .2s ease-in-out
+    //&:active
+        color: #fff
+        background-color: $primary-color
+        border: 1px solid $primary-color
+
+@media (max-width: 1200px)
+    .welcome-img
+        background-size: cover
+
+    .container.contact
+        .full
+            grid-column: 1 / 3
+
+    .direction
+        //padding: 0px 0px 15px 0px
+        text-align: center
+
+@media (max-width: 1050px)
+    .container.security, .container.contact
+        .img
+            background-size: cover
+    
+    .container.description
+        width: 80vw
+        .stiky-contact
+            padding: 0px 50px
+
+@media (max-width: 800px)
+    .container.home
+        grid-template-columns: 1fr 0fr
+        grid-auto-rows: 85vh 17vh
+        grid-gap: 0px
+        h1, h2
+            color: #fff
+        button
+            //background-color: $primary-color
+
+    .box.bottom
+        background-color: #f1f1f1
+
+    .welcome-img
+        width: 100%
+
+    .container.company .img 
+        grid-row-end: span 8
+
+    .container.security
+        grid-template-columns: 5fr 5fr
+        .full
+            grid-column: 1 / 3
+        .left
+            grid-column: 1 / 2
+        .right
+            grid-column: 2 / 3
+        .ambiental
+            grid-row: 2 / 3
+        .back
+            grid-row: 3 / 4
+        .img
+            display: none
+            //background-size: cover
+
+    .container.company, .container.services
+        .img
+            background-position: 50%
+    
+    .contactForm
+        width: 50vw

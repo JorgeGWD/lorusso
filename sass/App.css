@@ -58,7 +58,7 @@ body {
 }
 
 .box {
-  padding: 5vh;
+  padding: 4vh;
 }
 
 h1 {
@@ -68,8 +68,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 2vh;
-  font-size: 30px;
+  font-size: 3.5vmin;
   font-weight: bold;
 }
 
@@ -129,6 +128,7 @@ a {
 }
 
 .home h2 {
+  margin-top: 2vh;
   font-size: 5vmin;
   font-weight: lighter;
 }
@@ -143,7 +143,7 @@ a {
 }
 
 .container.home .box {
-  padding: 5vh 0px;
+  padding: 4vh 0px;
 }
 
 .welcome-text, .call-to-action {
@@ -201,7 +201,7 @@ a {
 
 .container.company .text span p {
   float: right;
-  margin-top: 5vh;
+  margin-top: 4vh;
   margin-bottom: 0px;
   font-weight: bold;
 }
@@ -243,7 +243,8 @@ a {
 }
 
 .container.services span p {
-  margin-top: 5vh;
+  float: left;
+  margin-top: 4vh;
   margin-bottom: 0px;
   font-weight: bold;
 }
@@ -255,6 +256,19 @@ a {
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeta;
+}
+
+.container.gallerySlider {
+  -ms-grid-rows: 5fr 1fr;
+      grid-template-rows: 5fr 1fr;
+}
+
+.container.gallerySlider .gallery {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-columns: 7fr 4fr;
+      grid-template-columns: 7fr 4fr;
 }
 
 .container.contact {
@@ -277,7 +291,7 @@ a {
 
 .container.contact .text span p {
   float: right;
-  margin-top: 5vh;
+  margin-top: 4vh;
   margin-bottom: 0px;
   font-weight: bold;
 }
@@ -303,7 +317,7 @@ a {
   grid-row: 2 / 4;
   background-image: url(../images/workers.jpg);
   background-size: 100%;
-  background-position: 50% 8%;
+  background-position: 50% 20%;
   background-repeat: no-repeta;
 }
 
@@ -360,90 +374,7 @@ a {
 }
 
 #section3 .container {
-  margin-top: 35px !important;
-}
-
-@media (max-width: 1200px) {
-  .welcome-img {
-    background-size: cover;
-  }
-  .container.contact .full {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
-  }
-  .direction {
-    text-align: center;
-  }
-}
-
-@media (max-width: 1050px) {
-  .container.security .img, .container.contact .img {
-    background-size: cover;
-  }
-  .container.description {
-    width: 80vw;
-  }
-  .container.description .stiky-contact {
-    padding: 0px 50px;
-  }
-}
-
-@media (max-width: 800px) {
-  .container.home {
-    -ms-grid-columns: 1fr 0fr;
-        grid-template-columns: 1fr 0fr;
-    grid-auto-rows: 84vh 16vh;
-    grid-gap: 0px;
-  }
-  .container.home h1, .container.home h2 {
-    color: #fff;
-  }
-  .box.bottom {
-    background-color: #f1f1f1;
-  }
-  .welcome-img {
-    width: 100%;
-  }
-  .container.company .img {
-    -ms-grid-row-span: 8;
-        grid-row-end: span 8;
-  }
-  .container.security {
-    -ms-grid-columns: 5fr 5fr;
-        grid-template-columns: 5fr 5fr;
-  }
-  .container.security .full {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
-  }
-  .container.security .left {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / 2;
-  }
-  .container.security .right {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-  }
-  .container.security .ambiental {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
-  }
-  .container.security .back {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3 / 4;
-  }
-  .container.security .img {
-    display: none;
-  }
-  .container.company .img, .container.services .img {
-    background-position: 50%;
-  }
+  margin-top: 25px !important;
 }
 
 .fp-tableCell {
@@ -501,7 +432,7 @@ a {
   position: relative;
   top: 50px;
   margin: 0px auto;
-  padding: 5vh;
+  padding: 4vh;
   width: 80%;
   height: 60vh;
   background-color: #fff;
@@ -510,11 +441,175 @@ a {
 
 .industrialPol a, .contactForm a {
   position: absolute;
-  right: 5vh;
+  right: 4vh;
 }
 
 .industrialPol p, .contactForm p {
   margin-top: 2vh;
+}
+
+.contactForm {
+  width: 25vw;
+  height: auto;
+}
+
+.wrap-input {
+  position: relative;
+}
+
+.wrap-input label {
+  display: block;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+input {
+  width: calc(100% - 4px);
+  padding: 10px 0px 5px 5px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  width: calc(100% - 2px);
+  max-width: calc(100% - 2px);
+  height: 150px;
+  padding: 10px 0px 5px 5px;
+  border: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+select {
+  width: 100%;
+  padding: 10px 0px 5px 5px;
+  border: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+select option:hover {
+  background-color: red;
+}
+
+.submit-area {
+  width: 100%;
+  text-align: center;
+}
+
+.focus-input {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+input#submit {
+  margin-top: 4vh;
+  padding: 1.5vmin 3vmin;
+  max-width: 200px;
+  font-size: 2vmin;
+  font-weight: bold;
+  background: none;
+  border: 2px solid #fcc722;
+  text-decoration: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .welcome-img {
+    background-size: cover;
+  }
+  .container.contact .full {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  .direction {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .container.security .img, .container.contact .img {
+    background-size: cover;
+  }
+  .container.description {
+    width: 80vw;
+  }
+  .container.description .stiky-contact {
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container.home {
+    -ms-grid-columns: 1fr 0fr;
+        grid-template-columns: 1fr 0fr;
+    grid-auto-rows: 85vh 17vh;
+    grid-gap: 0px;
+  }
+  .container.home h1, .container.home h2 {
+    color: #fff;
+  }
+  .box.bottom {
+    background-color: #f1f1f1;
+  }
+  .welcome-img {
+    width: 100%;
+  }
+  .container.company .img {
+    -ms-grid-row-span: 8;
+        grid-row-end: span 8;
+  }
+  .container.security {
+    -ms-grid-columns: 5fr 5fr;
+        grid-template-columns: 5fr 5fr;
+  }
+  .container.security .full {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  .container.security .left {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .container.security .right {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  .container.security .ambiental {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .container.security .back {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  .container.security .img {
+    display: none;
+  }
+  .container.company .img, .container.services .img {
+    background-position: 50%;
+  }
+  .contactForm {
+    width: 50vw;
+  }
 }
 
 header {
@@ -525,6 +620,10 @@ header {
 }
 
 header span {
+  display: none;
+}
+
+header input {
   display: none;
 }
 
@@ -679,10 +778,6 @@ nav ul {
   .nav-background, .nav-border {
     display: none;
   }
-}
-
-input {
-  display: none;
 }
 
 input#menu-btn:checked ~ nav {
