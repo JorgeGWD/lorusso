@@ -176,10 +176,19 @@ a
 
 .container.gallerySlider
     grid-template-rows: 5fr 1fr
+    width: 70%
     .gallery
         display: grid
         grid-gap: 15px
-        grid-template-columns: 7fr 4fr
+        grid-template-columns: 7fr 5fr
+        .thumbs
+            display: grid
+            grid-gap: 4px
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr 1fr
+            /*max-height: 490px*/
+            max-height: 51vh
+            overflow: auto
 
 .container.contact
     grid-template-columns: 6fr 6fr
@@ -442,5 +451,14 @@ input#submit
         .img
             background-position: 50%
     
+    .container.gallerySlider
+        width: 80%
+        .gallery
+            grid-template-columns: 1fr
+            grid-template-rows: 2fr 2fr
+            .thumbs
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+                grid-template-rows: 1fr 1fr
+
     .contactForm
         width: 50vw

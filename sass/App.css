@@ -261,14 +261,28 @@ a {
 .container.gallerySlider {
   -ms-grid-rows: 5fr 1fr;
       grid-template-rows: 5fr 1fr;
+  width: 70%;
 }
 
 .container.gallerySlider .gallery {
   display: -ms-grid;
   display: grid;
   grid-gap: 15px;
-  -ms-grid-columns: 7fr 4fr;
-      grid-template-columns: 7fr 4fr;
+  -ms-grid-columns: 7fr 5fr;
+      grid-template-columns: 7fr 5fr;
+}
+
+.container.gallerySlider .gallery .thumbs {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 4px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  /*max-height: 490px*/
+  max-height: 51vh;
+  overflow: auto;
 }
 
 .container.contact {
@@ -606,6 +620,21 @@ input#submit {
   }
   .container.company .img, .container.services .img {
     background-position: 50%;
+  }
+  .container.gallerySlider {
+    width: 80%;
+  }
+  .container.gallerySlider .gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+  }
+  .container.gallerySlider .gallery .thumbs {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
   }
   .contactForm {
     width: 50vw;
