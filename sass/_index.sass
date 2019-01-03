@@ -30,6 +30,10 @@ p
     font-size: 2.3vmin
     line-height: 4vmin
 
+span p
+    margin-bottom: 0px
+    font-weight: bold
+
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev
     display: none
@@ -56,6 +60,9 @@ p
         border-style: none
         //margin-top: 0px
         transform: none
+
+.text.back
+    background-color: transparent
 
 button
     float: right
@@ -145,17 +152,18 @@ a
 
 .container.security
     grid-template-columns: 5fr 6fr
-    span p
-        margin-bottom: 0px
-        font-weight: bold
     .img
         //grid-row-end: span 14
-        grid-column: 2 / 3
-        grid-row: 1 / 4
+        //grid-column: 2 / 3
+        //grid-row: 1 / 4
         background-image: url(../images/security.jpg)
-        background-size: 150%
+        background-size: cover
         background-position: top right
         background-repeat: no-repeta
+    .right
+        display: grid
+        grid-gap: 15px
+        grid-template-rows: auto 1fr 1fr 1fr auto
 
 .container.services
     grid-template-columns: 5fr 6fr
@@ -175,7 +183,7 @@ a
         background-repeat: no-repeta
 
 .container.gallerySlider
-    grid-template-rows: 5fr 1fr
+    grid-template-rows: 5fr auto
     width: 70%
     .gallery
         display: grid
@@ -389,6 +397,45 @@ input#submit
         color: #fff
         background-color: $primary-color
         border: 1px solid $primary-color
+
+.fp-viewing-home
+    footer
+        position: absolute
+        bottom: 50px
+        right: 0px
+        transform: rotate(-90deg)
+        transition: all .2s ease-in-out
+        p
+            font-size: 10px
+            color: rgba(255,255,255,.5)
+        a
+            color: rgba(255,255,255,.5)
+
+.fp-viewing-company-0, .fp-viewing-company-1, .fp-viewing-services-0, .fp-viewing-services-1
+    footer
+        position: absolute
+        bottom: 50px
+        right: 0px
+        transform: rotate(-90deg)
+        transition: all .2s ease-in-out
+        p
+            font-size: 10px
+            color: rgba(0,0,0,.5)
+        a
+            color: rgba(0,0,0,.5)
+
+.fp-viewing-contacts-0, .fp-viewing-contacts-1
+    footer
+        position: absolute
+        bottom: 150px
+        right: 0px
+        transform: rotate(-90deg)
+        transition: all .2s ease-in-out
+        p
+            font-size: 10px
+            color: rgba(0,0,0,.5)
+        a
+            color: rgba(0,0,0,.5)
 
 @media (max-width: 1200px)
     .welcome-img
