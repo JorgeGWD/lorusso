@@ -30,9 +30,25 @@ p
     font-size: 2.3vmin
     line-height: 4vmin
 
-span p
-    margin-bottom: 0px
-    font-weight: bold
+span
+    display: grid
+    grid-gap: 15px
+    p
+        margin-bottom: 0px
+        font-weight: bold
+    img.icon-nav
+        width: 4vmin
+        height: auto
+
+span.left
+        float: left
+        grid-template-columns: 1fr 4fr
+
+span.right
+        float: right
+        margin-top: 4vh
+        text-align: right
+        grid-template-columns: 4fr 1fr
 
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev
@@ -41,25 +57,19 @@ span p
 .text
     position: relative
     background-color: #fff
-    .fp-controlArrow.fp-next,
-    .fp-controlArrow.fp-prev
-        display: inline
-        -webkit-user-select: none
-        -moz-user-select: none
-        -khtml-user-select: none
-        -ms-user-select: none
-        position: relative
-        //z-index: 4
-        top: 0px
-        right: 0px
-        left: 0px
-        cursor: pointer
-        width: auto
-        height: auto
-        //background-color: red
-        border-style: none
-        //margin-top: 0px
-        transform: none
+
+p.fp-controlArrow,
+img.fp-controlArrow,
+h2.fp-controlArrow
+    position: relative
+    z-index: 4
+    top: 0px
+    cursor: pointer
+    width: 100%
+    height: auto
+    border-style: none
+    margin-top: 0px
+    align-self: center
 
 .text.back
     background-color: transparent
@@ -137,13 +147,13 @@ a
         //grid-row-end: span 1
         p
             //margin-bottom: 35px
-            margin-bottom: 3vh
+            //margin-bottom: 3vh
         span p
-            float: right
+            //float: right
             //margin-top: 100px
-            margin-top: 4vh
-            margin-bottom: 0px
-            font-weight: bold
+            //margin-top: 4vh
+            //margin-bottom: 0px
+            //font-weight: bold
     .img
         grid-row-end: span 14
         background-image: url(../images/working.jpg)
@@ -164,13 +174,23 @@ a
         display: grid
         grid-gap: 15px
         grid-template-rows: auto 1fr 1fr 1fr auto
+        .industrial, .quality, .environmental
+            a
+                display: grid
+                grid-gap: 15px
+                grid-template-columns: 1fr 15fr
+                img
+                    width: 5vmin
+                    height: auto
+                p
+                    align-self: center
 
 .container.services
     grid-template-columns: 5fr 6fr
     span p
         //margin-top: 100px
-        float: left
-        margin-top: 4vh
+        //float: left
+        //margin-top: 4vh
         margin-bottom: 0px
         font-weight: bold
     .img
@@ -302,16 +322,19 @@ a
     pointer-events: auto
 
 .close
-    position: absolute
-    top: 35px
-    padding: 10px 13px
-    right: 25px
-    color: #fff
-    //width: 24px
-    text-decoration: none
-    font-weight: bold
-    background: #000
-    border-radius: 50px
+    img
+        position: absolute
+        top: 0px
+        //padding: 10px 13px
+        right: 20px
+        width: 4vmin
+        height: auto
+        //color: #fff
+        //width: 24px
+        //text-decoration: none
+        //font-weight: bold
+        //background: #000
+        //border-radius: 50px
 
 .industrialPol, .contactForm
     position: relative

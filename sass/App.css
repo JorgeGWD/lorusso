@@ -77,9 +77,34 @@ p {
   line-height: 4vmin;
 }
 
+span {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+}
+
 span p {
   margin-bottom: 0px;
   font-weight: bold;
+}
+
+span img.icon-nav {
+  width: 4vmin;
+  height: auto;
+}
+
+span.left {
+  float: left;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+span.right {
+  float: right;
+  margin-top: 4vh;
+  text-align: right;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
 }
 
 .fp-controlArrow.fp-next,
@@ -92,23 +117,20 @@ span p {
   background-color: #fff;
 }
 
-.text .fp-controlArrow.fp-next,
-.text .fp-controlArrow.fp-prev {
-  display: inline;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -ms-user-select: none;
+p.fp-controlArrow,
+img.fp-controlArrow,
+h2.fp-controlArrow {
   position: relative;
+  z-index: 4;
   top: 0px;
-  right: 0px;
-  left: 0px;
   cursor: pointer;
-  width: auto;
+  width: 100%;
   height: auto;
   border-style: none;
-  -webkit-transform: none;
-          transform: none;
+  margin-top: 0px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .text.back {
@@ -204,17 +226,6 @@ a {
       grid-template-columns: 5fr 6fr;
 }
 
-.container.company .text p {
-  margin-bottom: 3vh;
-}
-
-.container.company .text span p {
-  float: right;
-  margin-top: 4vh;
-  margin-bottom: 0px;
-  font-weight: bold;
-}
-
 .container.company .img {
   -ms-grid-row-span: 14;
       grid-row-end: span 14;
@@ -243,14 +254,31 @@ a {
       grid-template-rows: auto 1fr 1fr 1fr auto;
 }
 
+.container.security .right .industrial a, .container.security .right .quality a, .container.security .right .environmental a {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-columns: 1fr 15fr;
+      grid-template-columns: 1fr 15fr;
+}
+
+.container.security .right .industrial a img, .container.security .right .quality a img, .container.security .right .environmental a img {
+  width: 5vmin;
+  height: auto;
+}
+
+.container.security .right .industrial a p, .container.security .right .quality a p, .container.security .right .environmental a p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .container.services {
   -ms-grid-columns: 5fr 6fr;
       grid-template-columns: 5fr 6fr;
 }
 
 .container.services span p {
-  float: left;
-  margin-top: 4vh;
   margin-bottom: 0px;
   font-weight: bold;
 }
@@ -436,16 +464,12 @@ a {
   pointer-events: auto;
 }
 
-.close {
+.close img {
   position: absolute;
-  top: 35px;
-  padding: 10px 13px;
-  right: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  background: #000;
-  border-radius: 50px;
+  top: 0px;
+  right: 20px;
+  width: 4vmin;
+  height: auto;
 }
 
 .industrialPol, .contactForm {
