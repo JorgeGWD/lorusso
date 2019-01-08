@@ -41,14 +41,14 @@ span
         height: auto
 
 span.left
-        float: left
-        grid-template-columns: 1fr 4fr
+    float: left
+    grid-template-columns: 1fr 4fr
 
 span.right
-        float: right
-        margin-top: 4vh
-        text-align: right
-        grid-template-columns: 4fr 1fr
+    float: right
+    margin-top: 4vh
+    text-align: right
+    grid-template-columns: 4fr 1fr
 
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev
@@ -294,7 +294,7 @@ a
 .fp-tableCell
     position: relative
 
-.politicsModal, .contactModal
+.policysModal, .contactModal
     position: absolute
     display: flex
     justify-content: center
@@ -317,16 +317,16 @@ a
         line-height: 4vmin
         list-style: circle
 
-.politicsModal:target, .contactModal:target
+.policysModal:target, .contactModal:target
     opacity: 1
     pointer-events: auto
 
 .close
     img
         position: absolute
-        top: 0px
+        top: 10px
         //padding: 10px 13px
-        right: 20px
+        right: 10px
         width: 4vmin
         height: auto
         //color: #fff
@@ -340,20 +340,34 @@ a
     position: relative
     top: 50px
     margin: 0px auto
-    padding: 4vh
     width: 80%
-    height: 60vh
     background-color: #fff
-    overflow: auto
-    a
-        position: absolute
-        right: 4vh
+    h2
+        margin-top: 3vh
     p
         margin-top: 2vh
+
+.policysTitle, .policysContent
+    padding: 4vh
+
+.policysTitle
+    position: fixed
+    padding-bottom: 0vh
+    width: 38%
+    background-color: #fff
+    h1
+        margin-bottom: 0vh
+
+.policysContent
+    margin-top: 10vh
+    padding-top: 0vh
+    overflow: auto
+    height: 60vh
 
 .contactForm
     width: 25vw
     height: auto
+    padding: 4vh
 
 .wrap-input
     position: relative

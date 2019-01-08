@@ -429,7 +429,7 @@ a {
   position: relative;
 }
 
-.politicsModal, .contactModal {
+.policysModal, .contactModal {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,22 +452,22 @@ a {
   pointer-events: none;
 }
 
-.politicsModal li, .contactModal li {
+.policysModal li, .contactModal li {
   margin: 2.5vh 0px 0px 2.5vh;
   font-size: 2.3vmin;
   line-height: 4vmin;
   list-style: circle;
 }
 
-.politicsModal:target, .contactModal:target {
+.policysModal:target, .contactModal:target {
   opacity: 1;
   pointer-events: auto;
 }
 
 .close img {
   position: absolute;
-  top: 0px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   width: 4vmin;
   height: auto;
 }
@@ -476,25 +476,44 @@ a {
   position: relative;
   top: 50px;
   margin: 0px auto;
-  padding: 4vh;
   width: 80%;
-  height: 60vh;
   background-color: #fff;
-  overflow: auto;
 }
 
-.industrialPol a, .contactForm a {
-  position: absolute;
-  right: 4vh;
+.industrialPol h2, .contactForm h2 {
+  margin-top: 3vh;
 }
 
 .industrialPol p, .contactForm p {
   margin-top: 2vh;
 }
 
+.policysTitle, .policysContent {
+  padding: 4vh;
+}
+
+.policysTitle {
+  position: fixed;
+  padding-bottom: 0vh;
+  width: 38%;
+  background-color: #fff;
+}
+
+.policysTitle h1 {
+  margin-bottom: 0vh;
+}
+
+.policysContent {
+  margin-top: 10vh;
+  padding-top: 0vh;
+  overflow: auto;
+  height: 60vh;
+}
+
 .contactForm {
   width: 25vw;
   height: auto;
+  padding: 4vh;
 }
 
 .wrap-input {
@@ -901,4 +920,18 @@ input#menu-btn:checked ~ nav {
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
+
+/*::-webkit-scrollbar
+    width: 4vmin
+    border: none */
+/*::-webkit-scrollbar-button:single-button
+    background-color: #fff */
+/*::-webkit-scrollbar-button:single-button:vertical:decrement,
+    background-image: url(../images/icon-nav-back.svg)
+    background-repeat: no-repeta
+    transform: rotate(90deg) */
+/*::-webkit-scrollbar-button:single-button:vertical:increment
+    background-image: url(../images/icon-nav-next.svg)
+    background-repeat: no-repeta
+    transform: rotate(-90deg) */
 /*# sourceMappingURL=App.css.map */
